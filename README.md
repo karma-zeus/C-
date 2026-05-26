@@ -1,6 +1,8 @@
 # FPS Game Engine - C++
 
-[View the Game Repository](https://github.com/karma-zeus/C-/)
+[🎮 **PLAY THE GAME NOW** →](https://github.com/karma-zeus/C-/)
+
+---
 
 A core FPS (First-Person Shooter) game engine implementation in C++ using OpenGL.
 
