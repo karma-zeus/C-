@@ -197,6 +197,16 @@
             transform: translateY(-2px);
         }
         
+        .btn-primary {
+            background-color: white;
+            color: #667eea;
+            border-color: white;
+        }
+        
+        .btn-primary:hover {
+            background-color: #f0f0f0;
+        }
+        
         .error-message {
             background: #fee;
             color: #c33;
@@ -229,6 +239,7 @@
             <h1>🎮 C++ FPS Game Engine</h1>
             <p class="tagline">Play the First-Person Shooter game directly in your browser!</p>
             <div class="btn-group">
+                <a href="instant-play.html" class="btn btn-primary">⚡ Play Straight Away!</a>
                 <a href="https://github.com/karma-zeus/C-" class="btn">View on GitHub</a>
                 <a href="#controls" class="btn">Learn Controls</a>
             </div>
@@ -238,7 +249,7 @@
             <div id="errorMessage" class="error-message"></div>
             <canvas id="gameCanvas" width="1000" height="700"></canvas>
             <div class="game-info">
-                <p><strong>💡 Tip:</strong> Click on the game to focus it, then use keyboard and mouse to play!</p>
+                <p><strong>💡 Tip:</strong> Click on the game to focus it, then use keyboard and mouse to play! Or <a href="instant-play.html" style="color: #667eea; font-weight: 600;">click here to play straight away</a>.</p>
             </div>
         </div>
         
