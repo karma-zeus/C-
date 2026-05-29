@@ -1,12 +1,352 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>My Website</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C++ FPS Game Engine</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            text-align: center;
+            color: white;
+            padding: 60px 20px 40px;
+        }
+        
+        h1 {
+            font-size: 3.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .tagline {
+            font-size: 1.3em;
+            opacity: 0.95;
+            margin-bottom: 30px;
+        }
+        
+        .btn-group {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 40px;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: 2px solid white;
+        }
+        
+        .btn-primary {
+            background-color: white;
+            color: #667eea;
+        }
+        
+        .btn-primary:hover {
+            background-color: #667eea;
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
+        .btn-secondary {
+            background-color: transparent;
+            color: white;
+        }
+        
+        .btn-secondary:hover {
+            background-color: rgba(255,255,255,0.2);
+            transform: translateY(-2px);
+        }
+        
+        .content {
+            background: white;
+            border-radius: 10px;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            margin-bottom: 30px;
+        }
+        
+        h2 {
+            color: #667eea;
+            margin-bottom: 20px;
+            font-size: 2em;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 10px;
+        }
+        
+        h3 {
+            color: #764ba2;
+            margin-top: 25px;
+            margin-bottom: 15px;
+        }
+        
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .feature {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
+        }
+        
+        .feature h4 {
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+        
+        .code-block {
+            background: #2d2d2d;
+            color: #f8f8f2;
+            padding: 20px;
+            border-radius: 5px;
+            overflow-x: auto;
+            margin: 15px 0;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+        
+        .requirements {
+            background: #e8f4f8;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
+            margin: 20px 0;
+        }
+        
+        .requirements ul {
+            margin-left: 20px;
+        }
+        
+        .requirements li {
+            margin: 8px 0;
+        }
+        
+        footer {
+            text-align: center;
+            color: white;
+            padding: 30px;
+            margin-top: 50px;
+        }
+        
+        footer p {
+            margin: 5px 0;
+        }
+        
+        .stats {
+            display: flex;
+            justify-content: space-around;
+            margin: 30px 0;
+            flex-wrap: wrap;
+        }
+        
+        .stat {
+            text-align: center;
+            padding: 20px;
+        }
+        
+        .stat-number {
+            font-size: 2.5em;
+            font-weight: bold;
+            color: #667eea;
+        }
+        
+        .stat-label {
+            color: #666;
+            margin-top: 5px;
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.2em;
+            }
+            
+            .features {
+                grid-template-columns: 1fr;
+            }
+            
+            .btn-group {
+                flex-direction: column;
+            }
+        }
+    </style>
 </head>
 <body>
-
-<h1>Hello!</h1>
-<p>This is my first website.</p>
-
+    <div class="container">
+        <header>
+            <h1>🎮 C++ FPS Game Engine</h1>
+            <p class="tagline">A powerful First-Person Shooter game engine built with modern C++</p>
+            <div class="btn-group">
+                <a href="https://github.com/karma-zeus/C-" class="btn btn-primary">View on GitHub</a>
+                <a href="https://github.com/karma-zeus/C-#building" class="btn btn-secondary">Get Started</a>
+            </div>
+        </header>
+        
+        <div class="content">
+            <h2>📋 Project Overview</h2>
+            <p>This is a core FPS (First-Person Shooter) game engine implementation in C++ using OpenGL. It features a complete game loop, entity system, physics simulation, and combat mechanics.</p>
+            
+            <div class="stats">
+                <div class="stat">
+                    <div class="stat-number">5+</div>
+                    <div class="stat-label">Core Systems</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">C++17</div>
+                    <div class="stat-label">Standard</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">OpenGL</div>
+                    <div class="stat-label">Graphics</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="content">
+            <h2>⭐ Key Features</h2>
+            <div class="features">
+                <div class="feature">
+                    <h4>🎨 Graphics Engine</h4>
+                    <p>OpenGL-based rendering with shader support for stunning visuals</p>
+                </div>
+                <div class="feature">
+                    <h4>⚙️ Physics System</h4>
+                    <p>Rigid body physics with gravity simulation for realistic gameplay</p>
+                </div>
+                <div class="feature">
+                    <h4>🎮 Input System</h4>
+                    <p>Keyboard and mouse handling with smooth camera control</p>
+                </div>
+                <div class="feature">
+                    <h4>🕹️ Entity System</h4>
+                    <p>Player, Enemy, and Projectile entities for dynamic gameplay</p>
+                </div>
+                <div class="feature">
+                    <h4>🌍 World System</h4>
+                    <p>Level generation and object management</p>
+                </div>
+                <div class="feature">
+                    <h4>🔊 Audio Framework</h4>
+                    <p>Ready for complete sound integration</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="content">
+            <h2>🎯 Gameplay Mechanics</h2>
+            <ul style="margin-left: 20px; line-height: 2;">
+                <li><strong>First-Person Camera:</strong> Mouse look and WASD movement</li>
+                <li><strong>Combat System:</strong> Projectile firing and enemy AI</li>
+                <li><strong>Damage System:</strong> Health tracking for player and enemies</li>
+                <li><strong>Enemy AI:</strong> Chase and attack behavior</li>
+                <li><strong>HUD System:</strong> Health, ammo, and kill counter display</li>
+            </ul>
+        </div>
+        
+        <div class="content">
+            <h2>📦 Requirements</h2>
+            <div class="requirements">
+                <ul>
+                    <li>C++ 17 or later</li>
+                    <li>CMake 3.10 or later</li>
+                    <li>GLFW3</li>
+                    <li>OpenGL 3.3+</li>
+                    <li>GLM (header-only)</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="content">
+            <h2>🚀 Quick Start</h2>
+            <h3>Installation (Ubuntu/Debian)</h3>
+            <div class="code-block">sudo apt-get install libglfw3-dev libglm-dev libgl1-mesa-dev</div>
+            
+            <h3>Building</h3>
+            <div class="code-block">mkdir build
+cd build
+cmake ..
+make
+./fps_game</div>
+            
+            <h3>Controls</h3>
+            <ul style="margin-left: 20px; line-height: 2; margin-top: 15px;">
+                <li><strong>WASD:</strong> Movement</li>
+                <li><strong>Mouse:</strong> Look around</li>
+                <li><strong>Left Click:</strong> Shoot</li>
+                <li><strong>ESC:</strong> Exit</li>
+            </ul>
+        </div>
+        
+        <div class="content">
+            <h2>📚 Project Structure</h2>
+            <div class="code-block">src/
+├── main.cpp                 # Entry point
+├── engine/
+│   ├── game.h/cpp          # Main game loop
+│   ├── window.h/cpp        # Window management
+│   ├── input.h/cpp         # Input handling
+│   └── camera.h/cpp        # Camera system
+├── graphics/
+│   ├── shader.h/cpp        # Shader compilation
+│   ├── mesh.h/cpp          # Mesh rendering
+│   └── renderer.h/cpp      # Rendering system
+├── physics/
+│   └── physics.h/cpp       # Physics simulation
+├── entity/
+│   ├── player.h/cpp        # Player entity
+│   ├── enemy.h/cpp         # Enemy entity
+│   └── projectile.h/cpp    # Projectile entity
+└── world/
+    └── world.h/cpp         # Level and world management</div>
+        </div>
+        
+        <div class="content">
+            <h2>🔮 Future Enhancements</h2>
+            <h3>Planned Features:</h3>
+            <ul style="margin-left: 20px; line-height: 2;">
+                <li>Advanced Graphics: Texture mapping, normal mapping, shadow mapping, particle effects</li>
+                <li>Audio: Background music, sound effects, 3D spatial audio</li>
+                <li>AI Improvements: Pathfinding (A*), state machines, tactical awareness</li>
+                <li>Networking: Multiplayer support, client-server architecture</li>
+                <li>UI/UX: Main menu, settings panel, level selection, scoreboard</li>
+                <li>Advanced Physics: Collision detection, ragdoll physics, vehicle physics</li>
+            </ul>
+        </div>
+        
+        <footer>
+            <p><strong>Created by:</strong> karma-zeus</p>
+            <p><strong>License:</strong> MIT - Feel free to use this for learning and projects!</p>
+            <p style="margin-top: 20px; opacity: 0.9;">Made with ❤️ for game developers</p>
+        </footer>
+    </div>
 </body>
 </html>
